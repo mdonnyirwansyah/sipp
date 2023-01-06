@@ -21,7 +21,7 @@ class CreateOrdersTable extends Migration
             $table->string('description');
             $table->integer('price');
             $table->enum('status', ['Pesanan Dibuat', 'Pesanan Diproses', 'Pesanan Selesai']);
-            $table->enum('payment_status', ['Lunas', 'Belum Bayar']);
+            $table->enum('payment_status', ['Belum Lunas','Lunas']);
             $table->timestamps();
         });
     }

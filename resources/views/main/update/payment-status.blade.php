@@ -178,7 +178,7 @@ $(document).ready(function() {
                                     <span class="input-group-text" id="inputGroup-sizing-sm">Status</span>
                                 </div>
                                 <select class="form-control" id="payment-status" name="payment_status">
-                                    <option value="Belum Bayar">Belum Bayar</option>
+                                    <option value="Belum Lunas">Belum Lunas</option>
                                     <option value="Lunas">Lunas</option>
                                 </select>
                             </div>

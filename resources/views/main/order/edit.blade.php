@@ -80,21 +80,6 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="status_pembayaran" class="col-sm-2 col-form-label text-sm-right">Status Pembayaran</label>
-                                    <div class="col-sm-10">
-                                        <select class="form-control @error('status_pembayaran') is-invalid @enderror" id="status_pembayaran" name="status_pembayaran">
-                                            <option selected disabled>Pilih Status Pembayaran</option>
-                                            <option value="Belum Bayar" selected="{{ $order->status_pembayaran == 'Belum Bayar' ? true : false }}">Belum Bayar</option>
-                                            <option value="Lunas" selected="{{ $order->status_pembayaran == 'Lunas' ? true : false }}">Lunas</option>
-                                        </select>
-                                        @error('status_pembayaran')
-                                        <span class="invalid-feedback" role="alert">
-                                            <small>{{ $message }}</small>
-                                        </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="form-group row">
                                     <label for="nama" class="col-sm-2 col-form-label text-sm-right">Nama</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" value="{{ old('nama') ?? $order->customer->name ?? '' }}">

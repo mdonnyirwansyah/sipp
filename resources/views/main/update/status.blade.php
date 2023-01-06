@@ -49,7 +49,7 @@ $(document).ready(function() {
             success: function (response) {
                 if (response.success) {
                     let result = response.success;
-                    let badge = result.payment_status == 'Belum Bayar' ? '<span class="text-muted badge badge-danger text-white">Belum Bayar</span>' : '<span class="text-muted badge badge-success text-white">Lunas</span>';
+                    let badge = result.payment_status == 'Belum Lunas' ? '<span class="text-muted badge badge-danger text-white">Belum Lunas</span>' : '<span class="text-muted badge badge-success text-white">Lunas</span>';
 
                     $('#has_result').attr( "style", "display: block !important;" );
                     $('#has_error').attr( "style", "display: none !important;" );

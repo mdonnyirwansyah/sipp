@@ -83,7 +83,7 @@
                                     <div class="col-sm-10">
                                         <select class="form-control @error('status_pembayaran') is-invalid @enderror" id="status_pembayaran" name="status_pembayaran">
                                             <option selected disabled>Pilih Status Pembayaran</option>
-                                            <option value="Belum Bayar">Belum Bayar</option>
+                                            <option value="Belum Lunas">Belum Lunas</option>
                                             <option value="Lunas">Lunas</option>
                                         </select>
                                         @error('status_pembayaran')

@@ -184,7 +184,6 @@ class OrderController extends Controller
             'ukuran' => 'required',
             'keterangan' => 'required',
             'harga' => 'required',
-            'status_pembayaran' => 'required',
             'nama' => 'required',
             'telepon' => 'required',
         ]);
@@ -206,8 +205,7 @@ class OrderController extends Controller
                 'design' => $request->desain ? $file : $order->design,
                 'size' => $request->ukuran,
                 'description' => $request->keterangan,
-                'price' => $request->harga,
-                'payment_status' => $request->status_pembayaran
+                'price' => $request->harga
             ]);
         });
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 06, 2023 at 06:11 PM
+-- Generation Time: Jan 07, 2023 at 04:09 AM
 -- Server version: 10.3.37-MariaDB-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -40,7 +40,7 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `name`, `phone`, `created_at`, `updated_at`) VALUES
-(4, 'Adi', '082287367787', '2023-01-06 03:44:24', '2023-01-06 03:44:24');
+(1, 'Adi', '082287367787', '2023-01-06 13:36:09', '2023-01-06 13:36:09');
 
 -- --------------------------------------------------------
 
@@ -56,7 +56,7 @@ CREATE TABLE `orders` (
   `description` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
   `status` enum('Pesanan Dibuat','Pesanan Diproses','Pesanan Selesai') NOT NULL,
-  `payment_status` enum('Lunas','Belum Bayar') NOT NULL,
+  `payment_status` enum('Belum Lunas','Lunas') NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -66,7 +66,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `customer_id`, `design`, `size`, `description`, `price`, `status`, `payment_status`, `created_at`, `updated_at`) VALUES
-(1673001864, 4, 'ffbef3f8c4bbb48516da258043439203', '2x2', 'Perhatikan foto atau gambar media promosi yang akan digunakan. Ukuran gambar juga harus diperhatikan, tidak terlalu besar atau kecil. Dapat disesuaikan dengan ukuran media pemasaran.', 80000, 'Pesanan Selesai', 'Belum Bayar', '2023-01-06 03:44:24', '2023-01-06 03:49:15');
+(1673037369, 1, '0738e2cb6dce4922112ff84ec6350b55', '2x2', 'Perhatikan foto atau gambar media promosi yang akan digunakan. Ukuran gambar juga harus diperhatikan, tidak terlalu besar atau kecil. Dapat disesuaikan dengan ukuran media pemasaran.', 80000, 'Pesanan Dibuat', 'Belum Lunas', '2023-01-06 13:36:10', '2023-01-06 13:36:10');
 
 -- --------------------------------------------------------
 
@@ -88,7 +88,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@sipp.test', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2023-01-05 21:03:10', '2023-01-05 21:03:10');
+(1, 'Admin', 'admin@sipp.test', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2023-01-06 13:29:08', '2023-01-06 13:29:08');
 
 --
 -- Indexes for dumped tables
@@ -122,13 +122,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1673001865;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1673037370;
 
 --
 -- AUTO_INCREMENT for table `users`
