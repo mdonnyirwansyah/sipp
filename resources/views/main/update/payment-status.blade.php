@@ -175,7 +175,7 @@ $(document).ready(function() {
                         <form id="form-update">
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-sm">Status</span>
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Status Pembayaran</span>
                                 </div>
                                 <select class="form-control" id="payment-status" name="payment_status">
                                     <option value="Belum Lunas">Belum Lunas</option>
